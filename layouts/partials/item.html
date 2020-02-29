@@ -1,0 +1,24 @@
+<p class="publications">
+	{{ if .link }}
+		<a href="{{- .link -}}">{{ .name }}</a>,
+	{{ else }}
+		{{ .name }},
+	{{ end }}
+</p>
+{{ .dest | markdownify }}.
+
+{{ if or (.code_link) .blog_link }}
+<span class="code_blog">
+	{{ with .code_link }}
+	[<a href="{{- . -}}">code</a>]
+	{{ end }}
+
+	{{ with .blog_link }}
+	[<a href="{{- . -}}">blog</a>]
+	{{ end }}
+</span>
+{{ end }}
+
+<span class="collaborators">
+	{{ .authors | markdownify }}
+</span>
