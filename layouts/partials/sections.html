@@ -1,10 +1,10 @@
 <div class="introduction">
 
 	{{- range $section := .Site.Params.sections -}}
-		<h4>{{ $section.title }}</h4>
+		<h3>{{ $section.title }}</h3>
 
 		{{- range $subsection := $section.subsections -}}
-			<div class="year">{{ $subsection.title }}</div>
+			<h4>{{ $subsection.title }}</h4>
 			<ul>
 				{{ range $item := $subsection.items }}
 					<li>{{- partial "item.html" $item -}}</li>
