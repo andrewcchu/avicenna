@@ -16,7 +16,6 @@
       <span class="collaborators">
         {{ $publication.authors | markdownify }}
       </span>
-      <br>
       <p class="destination"> {{ $publication.dest | markdownify }}. </p>
 
       {{ if or ($publication.code_link) $publication.blog_link }}
