@@ -11,7 +11,7 @@
       {{ if $publication.link }}
       <a href="{{ $publication.link }}" class="publications"> {{ $publication.name }} </a>
       {{ else }}
-      <p class="publications"> {{ $publication.name }}, </p>
+      <p class="publications"> {{ $publication.name }} </p>
       {{ end }}
       <span class="collaborators">
         {{ $publication.authors | markdownify }}
